@@ -1,106 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de Segurança Digital - Terceira Idade</title>
-    <style>
-        /* --- ESTILOS DE ACESSIBILIDADE E DESIGN --- */
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Segurança Digital para a Terceira Idade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 22px; /* Fonte ampliada por padrão */
-            line-height: 1.6;
-            background-color: #F4F6F8;
-            color: #1A1A1A; /* Alto contraste com o fundo */
-            padding: 20px;
-        }
+  <header class="hero-banner">
+    <h1>Portal da Internet Segura</h1>
+    <p>Aprenda a navegar no mundo digital de forma simples, direta e protegida.</p>
+    <a href="#ajuda" class="btn-ajuda" role="button">🚨 PRECISO DE AJUDA RÁPIDA</a>
+  </header>
 
-        /* Cabeçalho */
-        header {
-            background-color: #004080; /* Azul escuro acessível */
-            color: #FFFFFF;
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
+  <main class="container">
 
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+    <section class="secao">
+      <h2>🛡️ Dicas Importantes para sua Segurança</h2>
+      <ul class="lista-dicas">
+        <li>
+          <strong>Crie senhas fortes:</strong> Misture letras, números e símbolos. Nunca use sua data de nascimento ou nome completo.
+        </li>
+        <li>
+          <strong>Não compartilhe códigos:</strong> Códigos recebidos por mensagem (SMS ou WhatsApp) são pessoais. Nunca os envie para ninguém.
+        </li>
+        <li>
+          <strong>Ative a proteção em duas etapas:</strong> Essa opção adiciona uma camada extra de segurança nos seus aplicativos de mensagens e redes sociais.
+        </li>
+        <li>
+          <strong>Cuidado com redes Wi-Fi públicas:</strong> Evite acessar contas bancárias quando estiver conectado à internet de praças, restaurantes ou ônibus.
+        </li>
+      </ul>
+    </section>
 
-        /* Container Principal */
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+    <section class="secao">
+      <h2>⚖️ Seus Direitos no Ambiente Digital</h2>
+      <p style="margin-bottom: 20px;">Você está protegido por leis brasileiras, como o Marco Civil da Internet e a Lei Geral de Proteção de Dados (LGPD):</p>
 
-        /* Cartões de Dicas */
-        .card-dica {
-            background-color: #FFFFFF;
-            border: 3px solid #004080; /* Borda bem visível */
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+      <div class="card-direito">
+        <h3>Privacidade dos seus Dados</h3>
+        <p>Nenhuma empresa ou aplicativo pode usar ou vender suas informações pessoais sem a sua autorização expressa.</p>
+      </div>
 
-        .card-dica h2 {
-            color: #004080;
-            font-size: 28px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+      <div class="card-direito">
+        <h3>Direito ao Cancelamento e Exclusão</h3>
+        <p>Você tem o direito de pedir que suas informações sejam apagadas do sistema de qualquer empresa a qualquer momento.</p>
+      </div>
 
-        .card-dica p {
-            margin-bottom: 15px;
-        }
+      <div class="card-direito">
+        <h3>Proteção contra Ofensas e Crimes</h3>
+        <p>Ofensas, golpes ou uso indevido da sua foto na internet são crimes e podem ser denunciados à Polícia Civil.</p>
+      </div>
+    </section>
 
-        /* Destaques e Avisos */
-        .alerta {
-            background-color: #FFF3CD;
-            border-left: 8px solid #856404;
-            padding: 15px;
-            font-weight: bold;
-            border-radius: 4px;
-        }
+    <section class="secao" id="golpes">
+      <h2>🕵️ Como Identificar Golpes no Dia a Dia</h2>
 
-        /* Botão de Ajuda de Grande Dimensão */
-        .btn-ajuda {
-            display: block;
-            width: 100%;
-            background-color: #28A745; /* Verde para ação positiva */
-            color: #FFFFFF;
-            text-align: center;
-            text-decoration: none;
-            font-size: 26px;
-            font-weight: bold;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 30px;
-            border: none;
-        }
+      <div class="alerta-golpe">
+        <h3>1. Mensagens de Urgência ou Ameaças</h3>
+        <p><strong>Fique atento:</strong> Golpistas tentam fazer você agir sem pensar. Mensagens dizendo que sua conta bancária será bloqueada ou que um familiar precisa de dinheiro urgente geralmente são falsas.</p>
+      </div>
 
-        .btn-ajuda:hover, .btn-ajuda:focus {
-            background-color: #1E7E34;
-            outline: 4px solid #FFD700; /* Destaque ao focar */
-        }
+      <div class="alerta-golpe">
+        <h3>2. Links Estranhos por Mensagem</h3>
+        <p><strong>Fique atento:</strong> Recebeu uma oferta incrível, sorteio ou aviso do banco por SMS ou WhatsApp? Não clique no link antes de confirmar diretamente com o estabelecimento por um canal oficial.</p>
+      </div>
 
-        /* Rodapé */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 18px;
-            color: #555555;
-        }
-    </style>
+      <div class="alerta-golpe">
+        <h3>3. Falso Parente no WhatsApp</h3>
+        <p><strong>Fique atento:</strong> Se alguém mandar mensagem usando a foto de um filho ou neto com um número novo pedindo dinheiro, ligue imediatamente para o número antigo do seu familiar para confirmar.</p>
+      </div>
+    </section>
+
+    <section class="secao canal-ajuda" id="ajuda">
+      <h2>🚨 Canais de Ajuda Direta</h2>
+      <p>Se você acha que caiu em um golpe ou precisa de auxílio imediato:</p>
+      <br>
+      <p>1. <strong>Ligue para o seu banco</strong> imediatamente pelo número que fica no verso do seu cartão.</p>
+      <p>2. <strong>Procure a Polícia Civil</strong> do seu estado ou faça um Boletim de Ocorrência online.</p>
+      <p>3. <strong>Peça apoio</strong> a uma pessoa de sua total confiança para ajudar nos passos necessários.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Portal de Acessibilidade e Segurança Digital &copy; 2026 - Feito para proteger você.</p>
+  </footer>
+
+</body>
+</html>
