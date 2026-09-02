@@ -3,89 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guia de Segurança Digital para a Terceira Idade</title>
+  <title>Portal de Segurança Digital para Idosos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="hero-banner">
-    <h1>Portal da Internet Segura</h1>
-    <p>Aprenda a navegar no mundo digital de forma simples, direta e protegida.</p>
-    <a href="#ajuda" class="btn-ajuda" role="button">🚨 PRECISO DE AJUDA RÁPIDA</a>
+  <header class="topo-site">
+    <h1>Guia Fácil de Segurança na Internet</h1>
+    <p>Aprenda a navegar sem medo e com total proteção.</p>
+    
+    <a href="#janela-ajuda" class="btn-ajuda-destaque">
+      🚨 PRECISO DE AJUDA AGORA! (CLIQUE AQUI)
+    </a>
   </header>
 
-  <main class="container">
+  <div id="janela-ajuda" class="modal-overlay">
+    <div class="modal-conteudo">
+      <a href="#" class="btn-fechar" aria-label="Fechar janela">&times; FECHAR</a>
+      <h2>🚨 Socorro Rápido e O que Fazer</h2>
+      <p class="subtitulo-modal">Não se apavore. Siga estes passos simples se você suspeita de um golpe:</p>
+      
+      <div class="caixa-passo-ajuda">
+        <span class="numero-passo">1</span>
+        <p><strong>Bloqueie o cartão ou conta:</strong> Ligue para o número que está atrás do seu cartão do banco.</p>
+      </div>
 
-    <section class="secao">
-      <h2>🛡️ Dicas Importantes para sua Segurança</h2>
+      <div class="caixa-passo-ajuda">
+        <span class="numero-passo">2</span>
+        <p><strong>Não pague nada:</strong> Se alguém pediu dinheiro de surpresa, pare e ligue para um familiar antes de enviar.</p>
+      </div>
+
+      <div class="caixa-passo-ajuda">
+        <span class="numero-passo">3</span>
+        <p><strong>Avise a Polícia:</strong> Ligue 190 se estiver em perigo ou vá até a delegacia mais próxima.</p>
+      </div>
+
+      <a href="#" class="btn-fechar-inferior">Entendi, voltar ao site</a>
+    </div>
+  </div>
+
+  <main class="conteudo-principal">
+
+    <section class="cartao-secao">
+      <h2>🛡️ Dicas de Segurança para o Seu Dia a Dia</h2>
+      <p class="instrucao-leitura">Leia com calma e siga estes conselhos simples:</p>
+
       <ul class="lista-dicas">
         <li>
-          <strong>Crie senhas fortes:</strong> Misture letras, números e símbolos. Nunca use sua data de nascimento ou nome completo.
+          <strong>Senhas Secretas:</strong> Nunca anote suas senhas no celular e jamais conte para desconhecidos.
         </li>
         <li>
-          <strong>Não compartilhe códigos:</strong> Códigos recebidos por mensagem (SMS ou WhatsApp) são pessoais. Nunca os envie para ninguém.
+          <strong>Códigos do Celular:</strong> Se chegar um código por mensagem no seu celular, não envie para ninguém.
         </li>
         <li>
-          <strong>Ative a proteção em duas etapas:</strong> Essa opção adiciona uma camada extra de segurança nos seus aplicativos de mensagens e redes sociais.
-        </li>
-        <li>
-          <strong>Cuidado com redes Wi-Fi públicas:</strong> Evite acessar contas bancárias quando estiver conectado à internet de praças, restaurantes ou ônibus.
+          <strong>Ligações Estranhas:</strong> Se o banco ligar pedindo sua senha, desligue a chamada na hora. O banco nunca pede senha por telefone.
         </li>
       </ul>
     </section>
 
-    <section class="secao">
-      <h2>⚖️ Seus Direitos no Ambiente Digital</h2>
-      <p style="margin-bottom: 20px;">Você está protegido por leis brasileiras, como o Marco Civil da Internet e a Lei Geral de Proteção de Dados (LGPD):</p>
+    <section class="cartao-secao">
+      <h2>⚖️ Seus Direitos na Internet</h2>
+      <p class="instrucao-leitura">A lei protege você também no mundo digital:</p>
 
-      <div class="card-direito">
-        <h3>Privacidade dos seus Dados</h3>
-        <p>Nenhuma empresa ou aplicativo pode usar ou vender suas informações pessoais sem a sua autorização expressa.</p>
+      <div class="bloco-direito">
+        <h3>Seus dados são seus</h3>
+        <p>Nenhuma empresa pode vender seu nome, CPF ou telefone sem a sua permissão.</p>
       </div>
 
-      <div class="card-direito">
-        <h3>Direito ao Cancelamento e Exclusão</h3>
-        <p>Você tem o direito de pedir que suas informações sejam apagadas do sistema de qualquer empresa a qualquer momento.</p>
-      </div>
-
-      <div class="card-direito">
-        <h3>Proteção contra Ofensas e Crimes</h3>
-        <p>Ofensas, golpes ou uso indevido da sua foto na internet são crimes e podem ser denunciados à Polícia Civil.</p>
+      <div class="bloco-direito">
+        <h3>Respeito e Proteção</h3>
+        <p>Enganar ou xingar idosos na internet é crime. Você pode denunciar qualquer caso à polícia.</p>
       </div>
     </section>
 
-    <section class="secao" id="golpes">
-      <h2>🕵️ Como Identificar Golpes no Dia a Dia</h2>
+    <section class="cartao-secao">
+      <h2>🕵️ Como Descobrir se É um Golpe</h2>
 
       <div class="alerta-golpe">
-        <h3>1. Mensagens de Urgência ou Ameaças</h3>
-        <p><strong>Fique atento:</strong> Golpistas tentam fazer você agir sem pensar. Mensagens dizendo que sua conta bancária será bloqueada ou que um familiar precisa de dinheiro urgente geralmente são falsas.</p>
+        <h3>1. Falso Filho ou Neto no WhatsApp</h3>
+        <p><strong>Como é:</strong> Uma pessoa manda mensagem de um número novo usando a foto do seu familiar e pede dinheiro emprestado.</p>
+        <p class="dica-acao"><strong>O que fazer:</strong> Não mande dinheiro! Ligue para o número antigo do seu parente para confirmar.</p>
       </div>
 
       <div class="alerta-golpe">
-        <h3>2. Links Estranhos por Mensagem</h3>
-        <p><strong>Fique atento:</strong> Recebeu uma oferta incrível, sorteio ou aviso do banco por SMS ou WhatsApp? Não clique no link antes de confirmar diretamente com o estabelecimento por um canal oficial.</p>
+        <h3>2. Premios e Sorteios Falsos</h3>
+        <p><strong>Como é:</strong> Mensagem dizendo que você ganhou um presente ou que precisa recadastrar sua conta do banco.</p>
+        <p class="dica-acao"><strong>O que fazer:</strong> Apague a mensagem e não clique em nenhum link que estiver nela.</p>
       </div>
-
-      <div class="alerta-golpe">
-        <h3>3. Falso Parente no WhatsApp</h3>
-        <p><strong>Fique atento:</strong> Se alguém mandar mensagem usando a foto de um filho ou neto com um número novo pedindo dinheiro, ligue imediatamente para o número antigo do seu familiar para confirmar.</p>
-      </div>
-    </section>
-
-    <section class="secao canal-ajuda" id="ajuda">
-      <h2>🚨 Canais de Ajuda Direta</h2>
-      <p>Se você acha que caiu em um golpe ou precisa de auxílio imediato:</p>
-      <br>
-      <p>1. <strong>Ligue para o seu banco</strong> imediatamente pelo número que fica no verso do seu cartão.</p>
-      <p>2. <strong>Procure a Polícia Civil</strong> do seu estado ou faça um Boletim de Ocorrência online.</p>
-      <p>3. <strong>Peça apoio</strong> a uma pessoa de sua total confiança para ajudar nos passos necessários.</p>
     </section>
 
   </main>
 
-  <footer>
-    <p>Portal de Acessibilidade e Segurança Digital &copy; 2026 - Feito para proteger você.</p>
+  <footer class="rodape-site">
+    <p>Portal de Ajuda e Proteção ao Idoso &copy; 2026</p>
+    <p>Feito com letras grandes e leitura simples para ajudar você.</p>
   </footer>
 
 </body>

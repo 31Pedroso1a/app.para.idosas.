@@ -1,4 +1,4 @@
-/* Reset e Configurações de Acessibilidade Básicas */
+/* RESET E ESTILOS GERAIS */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,153 +6,173 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px; /* Fonte ampliada para facilitar a leitura */
+  font-family: Verdana, Geneva, sans-serif; /* Fonte muito clara e legível */
+  font-size: 20px; /* Tamanho confortável para idosos */
   line-height: 1.6;
-  color: #1A1A1A; /* Alto contraste */
-  background-color: #F4F6F9;
+  background-color: #EBF2F7;
+  color: #111111;
 }
 
-/* Cabeçalho e Banner Inicial */
-.hero-banner {
-  background-color: #003366; /* Azul escuro de alto contraste */
+/* TOPO AZUL ESCURO */
+.topo-site {
+  background-color: #0A2540; /* Azul escuro fechado */
   color: #FFFFFF;
-  padding: 60px 20px;
   text-align: center;
-  border-bottom: 5px solid #FFCC00;
+  padding: 40px 20px;
+  border-bottom: 6px solid #FFD700; /* Linha amarela para dar destaque */
 }
 
-.hero-banner h1 {
-  font-size: 36px;
-  margin-bottom: 15px;
+.topo-site h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
 }
 
-.hero-banner p {
-  font-size: 24px;
-  max-width: 800px;
-  margin: 0 auto 30px auto;
+.topo-site p {
+  font-size: 22px;
+  color: #E0E6ED;
+  margin-bottom: 25px;
 }
 
-/* Botão de Ajuda em Destaque */
-.btn-ajuda {
+/* BOTÃO VERMELHO CHAMATIVO */
+.btn-ajuda-destaque {
   display: inline-block;
-  background-color: #D9381E; /* Vermelho visível e chamativo */
+  background-color: #FF0000; /* Vermelho vivo */
   color: #FFFFFF;
   font-size: 24px;
   font-weight: bold;
-  padding: 20px 40px;
   text-decoration: none;
+  padding: 22px 35px;
   border-radius: 50px;
   border: 4px solid #FFFFFF;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
 }
 
-.btn-ajuda:hover, .btn-ajuda:focus {
-  background-color: #B22222;
-  outline: 4px solid #FFCC00;
+.btn-ajuda-destaque:hover,
+.btn-ajuda-destaque:focus {
+  background-color: #CC0000;
+  transform: scale(1.03);
 }
 
-/* Contêiner de Conteúdo */
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* ESTRUTURA DO CONTEÚDO */
+.conteudo-principal {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 0 15px;
 }
 
-/* Estilo Geral das Seções */
-.secao {
+.cartao-secao {
   background-color: #FFFFFF;
-  padding: 35px;
-  margin-bottom: 35px;
+  border: 3px solid #0A2540;
   border-radius: 12px;
-  border: 2px solid #D0D7DE;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin-bottom: 30px;
 }
 
-.secao h2 {
-  font-size: 28px;
-  color: #003366;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #003366;
+.cartao-secao h2 {
+  font-size: 26px;
+  color: #0A2540;
+  border-bottom: 3px solid #0A2540;
   padding-bottom: 10px;
-}
-
-/* Seção de Dicas */
-.lista-dicas {
-  list-style-type: none;
-}
-
-.lista-dicas li {
-  margin-bottom: 20px;
-  padding-left: 45px;
-  position: relative;
-}
-
-.lista-dicas li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #2E7D32;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-/* Seção de Direitos */
-.card-direito {
-  background-color: #EBF3FA;
-  border-left: 6px solid #003366;
-  padding: 20px;
   margin-bottom: 15px;
-  border-radius: 4px;
 }
 
-.card-direito h3 {
-  font-size: 22px;
-  color: #003366;
-  margin-bottom: 8px;
-}
-
-/* Seção de Golpes */
-.alerta-golpe {
-  background-color: #FFF3CD;
-  border-left: 6px solid #856404;
-  padding: 20px;
+.instrucao-leitura {
+  font-size: 19px;
+  color: #444444;
   margin-bottom: 20px;
-  border-radius: 4px;
+}
+
+/* DICAS */
+.lista-dicas li {
+  background-color: #F0F4F8;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 6px solid #0A2540;
+  list-style: none;
+}
+
+/* DIREITOS */
+.bloco-direito {
+  background-color: #E8F4FD;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.bloco-direito h3 {
+  color: #0A2540;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+/* GOLPES */
+.alerta-golpe {
+  background-color: #FFF8E7;
+  border: 2px solid #E6A100;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .alerta-golpe h3 {
+  color: #B36B00;
   font-size: 22px;
-  color: #856404;
   margin-bottom: 10px;
 }
 
-/* Seção Canal de Ajuda Direta */
-.canal-ajuda {
-  border-color: #D9381E;
+.dica-acao {
+  margin-top: 10px;
+  background-color: #FFE6E6;
+  padding: 10px;
+  border-radius: 5px;
+  color: #990000;
 }
 
-/* Rodapé */
-footer {
-  background-color: #1A1A1A;
+/* JANELA POP-UP (MODAL) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none; /* Escondido por padrão */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Exibe o modal ao clicar no botão */
+.modal-overlay:target {
+  display: flex;
+}
+
+.modal-conteudo {
+  background-color: #FFFFFF;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 15px;
+  border: 5px solid #FF0000;
+  text-align: left;
+  position: relative;
+}
+
+.btn-fechar {
+  display: inline-block;
+  float: right;
+  background-color: #333333;
   color: #FFFFFF;
-  text-align: center;
-  padding: 25px 20px;
-  font-size: 18px;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-/* Ajuste para telas menores */
-@media (max-width: 600px) {
-  body {
-    font-size: 18px;
-  }
-  .hero-banner h1 {
-    font-size: 28px;
-  }
-  .btn-ajuda {
-    width: 100%;
-    padding: 18px 10px;
-  }
-}
+.modal-conteudo h2 {
+  color: #CC0000;
+  font-size: 26px;
+  margin-bottom: 10px;
+  clear
