@@ -3,106 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal de Segurança Digital para Idosos</title>
+  <title>Portal Acessível</title>
+  <!-- Vinculação do arquivo CSS externo -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="hero-banner">
-    <h1>Portal da Internet Segura</h1>
-    <p>Aprenda a usar a internet de forma simples, clara e protegida.</p>
-    
-    <a href="#modal-ajuda" class="btn-ajuda">
-      🚨 PRECISO DE AJUDA RÁPIDA
-    </a>
+  <!-- Topo do Site -->
+  <header>
+    <h1>Página de Apoio e Informações</h1>
+    <p>Um espaço simples e fácil de navegar</p>
   </header>
 
-  <main class="container">
-
-    <section class="card-secao">
-      <h2>🛡️ Dicas Importantes de Segurança</h2>
-      <ul class="lista-dicas">
-        <li>
-          <strong>Crie senhas fáceis de lembrar para você, mas difíceis para os outros:</strong> Misture números e palavras simples. Guarde em um caderno seguro em casa.
-        </li>
-        <li>
-          <strong>Nunca envie códigos recebidos por mensagem:</strong> Se receber um código pelo celular, ele é seu. Nenhuma empresa séria vai pedir esse código.
-        </li>
-        <li>
-          <strong>Cuidado ao usar a internet na rua:</strong> Evite abrir o aplicativo do seu banco quando estiver conectado no Wi-Fi de praças, ônibus ou lojas.
-        </li>
-      </ul>
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="instrucoes">
+      <h2>Bem-vindo(a) ao nosso site!</h2>
+      <p>Este site foi feito pensando no seu conforto. Aqui você encontra textos claros, letras grandes e navegação simples.</p>
+      <p>Se tiver qualquer dúvida ou precisar de auxílio, basta clicar no botão vermelho abaixo.</p>
     </section>
 
-    <section class="card-secao">
-      <h2>⚖️ Seus Direitos no Ambiente Digital</h2>
-      
-      <div class="bloco-info azul">
-        <h3>Sua Privacidade é Protegida por Lei</h3>
-        <p>A Lei Geral de Proteção de Dados (LGPD) garante que nenhuma empresa pode pegar seus dados ou seu número sem a sua permissão.</p>
-      </div>
-
-      <div class="bloco-info azul">
-        <h3>Direito de Apagar suas Informações</h3>
-        <p>Você pode pedir para qualquer empresa apagar seus dados do sistema dela a qualquer momento.</p>
-      </div>
-
-      <div class="bloco-info azul">
-        <h3>Proteção Contra Crimes e Enganos</h3>
-        <p>Mensagens falsas, ofensas e golpes digitais são crimes. Você tem o direito de denunciar à polícia.</p>
-      </div>
-    </section>
-
-    <section class="card-secao">
-      <h2>🕵️ Como Identificar Golpes Comuns</h2>
-
-      <div class="bloco-info amarelo">
-        <h3>1. Mensagens de Urgência ou Ameaça</h3>
-        <p><strong>Fique atento:</strong> Mensagens dizendo que sua conta vai ser bloqueada hoje ou que um parente precisa de dinheiro rápido geralmente são golpes.</p>
-      </div>
-
-      <div class="bloco-info amarelo">
-        <h3>2. Links Estranhos pelo WhatsApp ou SMS</h3>
-        <p><strong>Fique atento:</strong> Se receber um link prometendo prêmios, dinheiro fácil ou cancelamento de dívidas, não clique.</p>
-      </div>
-
-      <div class="bloco-info amarelo">
-        <h3>3. Falso Parente Pedindo Dinheiro</h3>
-        <p><strong>Fique atento:</strong> Se alguém mandar mensagem com uma foto do seu filho ou neto dizendo que mudou de número e pede PIX, não pague. Ligue no número antigo dele para confirmar.</p>
-      </div>
-    </section>
-
+    <!-- Botão de Ajuda Chamativo -->
+    <button class="btn-ajuda" onclick="abrirAjuda()">
+      ❓ PRECISA DE AJUDA? CLIQUE AQUI
+    </button>
   </main>
 
-  <footer>
-    <p>Portal de Acessibilidade e Segurança Digital &copy; 2026</p>
-    <p>Criado para ajudar você a navegar com tranquilidade.</p>
-  </footer>
-
-  <div id="modal-ajuda" class="modal-overlay">
+  <!-- Janela de Ajuda (Modal) que abre no meio da tela -->
+  <div id="modalAjuda" class="modal-fundo">
     <div class="modal-conteudo">
-      <a href="#" class="modal-fechar" aria-label="Fechar janela">&times; FECHAR</a>
+      <h3>Central de Ajuda</h3>
+      <p><strong>Como navegar no site:</strong></p>
+      <p>1. Role a tela para baixo para ler as informações com calma.</p>
+      <p>2. Não é preciso sair desta página para tirar suas dúvidas.</p>
+      <p>3. Se precisar falar conosco, nosso telefone é: <strong>0800 123 4567</strong>.</p>
       
-      <h2>🚨 O que fazer em caso de emergência:</h2>
-      
-      <div class="passo-ajuda">
-        <strong>1. Foi vítima de um golpe no banco?</strong>
-        <p>Ligue imediatamente para o número do serviço de atendimento que está atrás do seu cartão de banco.</p>
-      </div>
-
-      <div class="passo-ajuda">
-        <strong>2. Clonaram seu WhatsApp?</strong>
-        <p>Avise seus amigos e familiares por ligação normal para que não enviem dinheiro a ninguém.</p>
-      </div>
-
-      <div class="passo-ajuda">
-        <strong>3. Precisa fazer uma denúncia?</strong>
-        <p>Procure a Delegacia de Polícia mais próxima da sua casa ou peça ajuda a um familiar para registrar um Boletim de Ocorrência na internet.</p>
-      </div>
-
-      <a href="#" class="btn-entendi">Entendi, fechar esta janela</a>
+      <button class="btn-fechar" onclick="fecharAjuda()">Entendi / Fechar</button>
     </div>
   </div>
+
+  <!-- Rodapé do Site -->
+  <footer>
+    <p>Site Acessível — Feito para facilitar o seu dia a dia.</p>
+  </footer>
+
+  <!-- Script para abrir/fechar a janela de ajuda -->
+  <script>
+    function abrirAjuda() {
+      document.getElementById('modalAjuda').style.display = 'flex';
+    }
+
+    function fecharAjuda() {
+      document.getElementById('modalAjuda').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>

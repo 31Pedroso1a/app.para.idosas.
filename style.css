@@ -1,147 +1,134 @@
-/* CONFIGURAÇÕES GERAIS */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Estilos Gerais e Cores */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px; /* Tamanho confortável para leitura */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #1a1a1a;
+  font-size: 20px; /* Letras grandes para facilitar a leitura */
   line-height: 1.6;
-  color: #1A1A1A;
-  background-color: #F0F4F8;
 }
 
-/* TOPO E RODAPÉ EM AZUL ESCURO */
-.hero-banner, footer {
-  background-color: #0A2540; /* Azul escuro marcante */
-  color: #FFFFFF;
+/* Topo (Cabeçalho) e Rodapé em Azul Escuro */
+header, footer {
+  background-color: #0b2545;
+  color: #ffffff;
   text-align: center;
+  padding: 25px 15px;
 }
 
-.hero-banner {
-  padding: 50px 20px;
-  border-bottom: 6px solid #FFD700; /* Linha amarela para dar contraste */
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
 }
 
-.hero-banner h1 {
-  font-size: 34px;
-  margin-bottom: 12px;
+header p {
+  margin: 8px 0 0 0;
+  font-size: 20px;
+  color: #e0e0e0;
 }
 
-.hero-banner p {
-  font-size: 22px;
-  margin-bottom: 25px;
-  color: #E2E8F0;
-}
-
-/* BOTÃO DE AJUDA VERMELHO CHAMATIVO */
-.btn-ajuda {
-  display: inline-block;
-  background-color: #DC2626; /* Vermelho vivo */
-  color: #FFFFFF;
-  font-size: 22px;
-  font-weight: bold;
-  padding: 18px 32px;
-  text-decoration: none;
-  border-radius: 50px;
-  border: 4px solid #FFFFFF;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.btn-ajuda:hover, .btn-ajuda:focus {
-  background-color: #991B1B;
-  outline: 3px solid #FFD700;
-}
-
-/* ESTRUTURA DAS SEÇÕES */
-.container {
-  max-width: 850px;
+/* Área Principal */
+main {
+  max-width: 900px;
   margin: 30px auto;
-  padding: 0 15px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card-secao {
-  background-color: #FFFFFF;
-  padding: 30px;
+.instrucoes {
+  background-color: #eef4fb;
+  border-left: 6px solid #0b2545;
+  padding: 20px;
   margin-bottom: 30px;
-  border-radius: 10px;
-  border: 2px solid #CBD5E1;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.card-secao h2 {
-  font-size: 26px;
-  color: #0A2540;
-  border-bottom: 3px solid #0A2540;
-  padding-bottom: 8px;
-  margin-bottom: 20px;
-}
-
-/* LISTAS DE DICAS */
-.lista-dicas {
-  list-style-type: none;
-}
-
-.lista-dicas li {
-  margin-bottom: 18px;
-  padding-left: 35px;
-  position: relative;
-}
-
-.lista-dicas li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #16A34A;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* BLOCOS DE INFORMAÇÃO */
-.bloco-info {
-  padding: 18px;
-  margin-bottom: 15px;
   border-radius: 6px;
 }
 
-.bloco-info.azul {
-  background-color: #E0F2FE;
-  border-left: 6px solid #0284C7;
+.instrucoes h2 {
+  margin-top: 0;
+  color: #0b2545;
+  font-size: 26px;
 }
 
-.bloco-info.azul h3 {
-  color: #0369A1;
-  margin-bottom: 6px;
+/* Botão Vermelho Chamativo */
+.btn-ajuda {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #d90429;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
 }
 
-.bloco-info.amarelo {
-  background-color: #FEF3C7;
-  border-left: 6px solid #D97706;
+.btn-ajuda:hover {
+  background-color: #b8001f;
 }
 
-.bloco-info.amarelo h3 {
-  color: #B45309;
-  margin-bottom: 6px;
-}
-
-/* RODAPÉ */
-footer {
-  padding: 30px 20px;
-  margin-top: 40px;
-}
-
-/* JANELA POP-UP (MODAL CENTRALIZADO APENAS EM CSS) */
-.modal-overlay {
+/* Janela de Ajuda (Modal) */
+.modal-fundo {
+  display: none; /* Escondido por padrão */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  display: none; /* Escondido por padrão */
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
   justify-content: center;
   align-items: center;
-  z-index:
+}
+
+.modal-conteudo {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 3px solid #0b2545;
+}
+
+.modal-conteudo h3 {
+  margin-top: 0;
+  color: #0b2545;
+  font-size: 28px;
+}
+
+.modal-conteudo p {
+  font-size: 20px;
+  text-align: left;
+}
+
+.btn-fechar {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #0b2545;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-fechar:hover {
+  background-color: #134074;
+}
+
+footer p {
+  margin: 0;
+  font-size: 18px;
+}
