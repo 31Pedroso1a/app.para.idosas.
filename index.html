@@ -4,10 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal Acessível e Segurança</title>
-  <!-- Vinculação do arquivo CSS externo -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Menu de Acessibilidade -->
+  <div class="menu-acessibilidade" aria-label="Menu de Acessibilidade">
+    <span class="titulo-acessibilidade">Acessibilidade:</span>
+    <button type="button" class="botao-acessibilidade" onclick="alterarTamanhoFonte(2)" title="Aumentar Fonte">A+</button>
+    <button type="button" class="botao-acessibilidade" onclick="alterarTamanhoFonte(-2)" title="Diminuir Fonte">A-</button>
+    <button type="button" class="botao-acessibilidade" onclick="restaurarTamanhoFonte()" title="Tamanho Normal">A (Normal)</button>
+    <button type="button" class="botao-acessibilidade botao-voz" onclick="alternarLeituraVoz()" id="botaoVoz" title="Ouvir Página em Voz Alta">🔊 Ler Página</button>
+  </div>
 
   <!-- Topo do Site -->
   <header>
@@ -16,7 +24,8 @@
   </header>
 
   <!-- Conteúdo Principal -->
-  <main>
+  <main id="conteudoPrincipal">
+    <!-- Balão Inicial -->
     <section class="instrucoes">
       <h2>Bem-vindo(a) ao nosso site!</h2>
       <p>Este site foi feito pensando no seu conforto. Aqui você encontra textos claros, letras grandes e navegação simples.</p>
@@ -28,7 +37,7 @@
       ❓ PRECISA DE AJUDA? CLIQUE AQUI
     </button>
 
-    <!-- SEÇÃO ADICIONADA: Dicas e Avisos de Segurança contra Golpes -->
+    <!-- Seção de Segurança contra Golpes em Balões -->
     <section class="secao-seguranca">
       <h2>🛡️ Guia de Proteção: Como Evitar Golpes</h2>
       <p>Sua segurança na internet e no telefone é muito importante. Leia com atenção as dicas abaixo para se proteger de fraudes:</p>
@@ -89,14 +98,66 @@
     <p>Site Acessível — Feito para facilitar o seu dia a dia.</p>
   </footer>
 
-  <!-- Script para abrir/fechar a janela de ajuda -->
+  <!-- Scripts do Site -->
   <script>
+    // Função do Modal de Ajuda
     function abrirAjuda() {
       document.getElementById('modalAjuda').style.display = 'flex';
     }
 
     function fecharAjuda() {
       document.getElementById('modalAjuda').style.display = 'none';
+    }
+
+    // Funcionalidades de Acessibilidade
+    let tamanhoFonteAtual = 20;
+    const tamanhoFontePadrao = 20;
+
+    function alterarTamanhoFonte(variacao) {
+      tamanhoFonteAtual += variacao;
+      if (tamanhoFonteAtual < 16) tamanhoFonteAtual = 16;
+      if (tamanhoFonteAtual > 32) tamanhoFonteAtual = 32;
+      document.body.style.fontSize = tamanhoFonteAtual + 'px';
+    }
+
+    function restaurarTamanhoFonte() {
+      tamanhoFonteAtual = tamanhoFontePadrao;
+      document.body.style.fontSize = tamanhoFontePadrao + 'px';
+    }
+
+    // Leitura em Voz Alta (SpeechSynthesis API)
+    let lendoVoz = false;
+
+    function alternarLeituraVoz() {
+      const botaoVoz = document.getElementById('botaoVoz');
+
+      if (!('speechSynthesis' in window)) {
+        alert('Seu navegador não suporta a função de leitura em voz alta.');
+        return;
+      }
+
+      if (lendoVoz) {
+        window.speechSynthesis.cancel();
+        lendoVoz = false;
+        botaoVoz.innerHTML = '🔊 Ler Página';
+        botaoVoz.classList.remove('em-execucao');
+      } else {
+        const textoParaLer = document.getElementById('conteudoPrincipal').innerText;
+        const mensagemVoz = new SpeechSynthesisUtterance(textoParaLer);
+        mensagemVoz.lang = 'pt-BR';
+        mensagemVoz.rate = 0.9; // Velocidade ligeiramente pausada
+
+        mensagemVoz.onend = function() {
+          lendoVoz = false;
+          botaoVoz.innerHTML = '🔊 Ler Página';
+          botaoVoz.classList.remove('em-execucao');
+        };
+
+        window.speechSynthesis.speak(mensagemVoz);
+        lendoVoz = true;
+        botaoVoz.innerHTML = '⏹️ Parar Leitura';
+        botaoVoz.classList.add('em-execucao');
+      }
     }
   </script>
 

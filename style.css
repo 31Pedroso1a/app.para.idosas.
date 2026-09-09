@@ -5,8 +5,62 @@ body {
   padding: 0;
   background-color: #f4f7f6;
   color: #1a1a1a;
-  font-size: 20px; /* Letras grandes para facilitar a leitura */
+  font-size: 20px; /* Tamanho padrão */
   line-height: 1.6;
+}
+
+/* Barra do Menu de Acessibilidade */
+.menu-acessibilidade {
+  background-color: #134074;
+  padding: 10px 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #0b2545;
+}
+
+.titulo-acessibilidade {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.botao-acessibilidade {
+  background-color: #ffffff;
+  color: #0b2545;
+  border: 2px solid #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.botao-acessibilidade:hover {
+  background-color: #0b2545;
+  color: #ffffff;
+}
+
+.botao-voz {
+  background-color: #f2c94c;
+  color: #1a1a1a;
+  border-color: #f2c94c;
+}
+
+.botao-voz:hover {
+  background-color: #d4a72c;
+  color: #1a1a1a;
+}
+
+.botao-voz.em-execucao {
+  background-color: #d90429;
+  color: #ffffff;
+  border-color: #d90429;
 }
 
 /* Topo (Cabeçalho) e Rodapé em Azul Escuro */
@@ -39,12 +93,14 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Balão da Seção Inicial */
 .instrucoes {
   background-color: #eef4fb;
   border-left: 6px solid #0b2545;
   padding: 20px;
   margin-bottom: 30px;
-  border-radius: 6px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .instrucoes h2 {
@@ -57,7 +113,7 @@ main {
 .btn-ajuda {
   display: block;
   width: 100%;
-  max-width: 350px;
+  max-width: 380px;
   margin: 30px auto;
   padding: 20px;
   background-color: #d90429;
@@ -65,18 +121,19 @@ main {
   font-size: 24px;
   font-weight: bold;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 .btn-ajuda:hover {
   background-color: #b8001f;
+  transform: translateY(-2px);
 }
 
-/* Nova Seção de Segurança contra Golpes */
+/* Seção de Segurança contra Golpes */
 .secao-seguranca {
   margin-top: 40px;
   border-top: 2px solid #e0e0e0;
@@ -86,15 +143,22 @@ main {
 .secao-seguranca h2 {
   color: #0b2545;
   font-size: 28px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
+/* Balões/Cards de Dicas Individuais */
 .cartao-golpe {
-  background-color: #fff9e6;
-  border: 2px solid #f2c94c;
-  border-radius: 10px;
-  padding: 20px;
+  background-color: #fffdf5;
+  border: 1px solid #f2c94c;
+  border-radius: 16px;
+  padding: 22px 25px;
   margin-bottom: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s;
+}
+
+.cartao-golpe:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .cartao-golpe h3 {
@@ -116,12 +180,14 @@ main {
   margin-bottom: 10px;
 }
 
+/* Balão do Aviso Urgente */
 .aviso-urgente {
-  background-color: #ffe6e6;
-  border: 3px solid #d90429;
-  border-radius: 10px;
-  padding: 20px;
+  background-color: #fff5f5;
+  border: 2px solid #d90429;
+  border-radius: 16px;
+  padding: 22px 25px;
   margin-top: 30px;
+  box-shadow: 0 6px 15px rgba(217, 4, 41, 0.12);
 }
 
 .aviso-urgente h3 {
@@ -132,7 +198,7 @@ main {
 
 /* Janela de Ajuda (Modal) */
 .modal-fundo {
-  display: none; /* Escondido por padrão */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -147,11 +213,11 @@ main {
 .modal-conteudo {
   background-color: #ffffff;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 16px;
   max-width: 500px;
   width: 90%;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   border: 3px solid #0b2545;
 }
 
@@ -174,7 +240,7 @@ main {
   font-size: 20px;
   font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
