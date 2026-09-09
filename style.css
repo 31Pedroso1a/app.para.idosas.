@@ -76,6 +76,60 @@ main {
   background-color: #b8001f;
 }
 
+/* Nova Seção de Segurança contra Golpes */
+.secao-seguranca {
+  margin-top: 40px;
+  border-top: 2px solid #e0e0e0;
+  padding-top: 30px;
+}
+
+.secao-seguranca h2 {
+  color: #0b2545;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.cartao-golpe {
+  background-color: #fff9e6;
+  border: 2px solid #f2c94c;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.cartao-golpe h3 {
+  margin-top: 0;
+  color: #8a5a00;
+  font-size: 24px;
+}
+
+.cartao-golpe p, .cartao-golpe ul {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cartao-golpe ul {
+  padding-left: 25px;
+}
+
+.cartao-golpe li {
+  margin-bottom: 10px;
+}
+
+.aviso-urgente {
+  background-color: #ffe6e6;
+  border: 3px solid #d90429;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.aviso-urgente h3 {
+  margin-top: 0;
+  color: #900000;
+  font-size: 24px;
+}
+
 /* Janela de Ajuda (Modal) */
 .modal-fundo {
   display: none; /* Escondido por padrão */
